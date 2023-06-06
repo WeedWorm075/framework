@@ -8,12 +8,12 @@ public class Mapping {
         return className;
     }
     public String getMethod() {
-        return method;
+        return Method;
     }
     public void setClassName(String className) {
         this.className = className;
     }
     public void setMethod(String method) {
-        this.method = method;
+        Method = method;
     }
 }
