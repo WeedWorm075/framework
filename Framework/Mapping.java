@@ -1,19 +1,23 @@
-package etu1769.framework;
+package etu1769.framework.util;
 
 public class Mapping {
     String className;
-    String Method;
+    String method;
 
+    public Mapping(String className, String method){
+        setClassName(className);
+        setMethod(method);
+    }
     public String getClassName(){
         return className;
     }
     public String getMethod() {
-        return Method;
+        return method;
     }
     public void setClassName(String className) {
         this.className = className;
     }
     public void setMethod(String method) {
-        Method = method;
+        this.method = method;
     }
 }
