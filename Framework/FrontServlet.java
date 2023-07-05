@@ -17,6 +17,7 @@ import etu1769.framework.util.Mapping;
 public class FrontServlet extends HttpServlet {
     HashMap<String,Mapping> MappingUrls = new HashMap<>();
 
+    //--------------- sprint 3 --------------//
     public void init(){
         try {
             List<Class<?>> allClasses = AnnotationScanner.getAllClasses("test");
@@ -25,7 +26,6 @@ public class FrontServlet extends HttpServlet {
                 for (Method method : annotatedMethods) {
                     MyAnnotation annotation = class1.getMethod(method.getName()).getAnnotation(MyAnnotation.class);
                     String methodName = method.getName();
-                    // URL url = new URL(annotation.Url());
                     MappingUrls.put(annotation.Url(),new Mapping(class1.getSimpleName(),methodName));
                 }
                 
@@ -36,6 +36,7 @@ public class FrontServlet extends HttpServlet {
             e.getMessage();
         }
     }
+    //-----------------------------------------//
     public HashMap getMappingUrls() {
         return MappingUrls;
     }
